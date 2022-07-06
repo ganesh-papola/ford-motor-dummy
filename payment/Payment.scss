@@ -1,0 +1,77 @@
+/* stylelint-disable max-nesting-depth, selector-max-compound-selectors, selector-class-pattern */
+@import 'styles/_app.scss';
+
+.payment-components-container {
+  margin-bottom: 50px;
+
+  .payment-left {
+    .ford-pay-div {
+      &.hidden {
+        display: none;
+      }
+
+      .align-button {
+        display: flex;
+        justify-content: flex-end;
+        min-height: 38px;
+        padding-right: 10px;
+
+        .modal-close-button {
+          right: 0;
+          width: 38px;
+          height: 38px;
+          border: none;
+          color: $ford-dark-blue;
+          background-color: transparent;
+          cursor: pointer;
+
+          .close-icon {
+            .close {
+              height: 0;
+              width: 25px;
+              border-bottom: 1px solid $ford-dark-blue;
+              transform: rotate(45deg);
+
+              &.flip {
+                margin-top: -1px;
+                transform: rotate(135deg);
+              }
+            }
+          }
+        }
+      }
+
+      .App {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .ford-pay {
+    display: none;
+  }
+
+  @include mq('lg') {
+    display: flex;
+    justify-content: space-between;
+
+    .payment-left {
+      width: 55%;
+
+      .ford-pay-div {
+        .align-button {
+          padding-right: 40px;
+          padding-top: 10px;
+        }
+
+        .App {
+          padding-top: 20px;
+        }
+      }
+    }
+
+    .payment-right {
+      width: 45%;
+    }
+  }
+}

@@ -1,0 +1,246 @@
+@import 'styles/_app.scss';
+@import 'styles/tools/utility.scss';
+@import './FDSSearch.scss';
+$autoSuggestLocationButtonWidth: 298px;
+.dealer-select {
+    &__outer {
+        display: flex;
+        flex-direction: column;
+        font-family: $ford-font-family;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.91;
+        letter-spacing: 1px;
+        width: 100%;
+    }
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        margin-bottom: 20px;
+        @include mq('md') {
+            flex-direction: row;
+        }
+        .ford-input-container .label-and-icon .input-label {
+            font-size: 12px;
+        }
+    }
+    &__input {
+        position: relative;
+        width: 300px;
+    }
+    &__location-button {
+        /* remove button styles */
+        appearance: none;
+        text-transform: none;
+        font-family: inherit;
+        margin: 0;
+        border: none;
+        border-image-width: 0;
+        background-color: inherit;
+        /* add specific styles */
+        position: absolute;
+        right: 1px;
+        height: 38px;
+        top: 34px;
+        padding: 0 5px;
+        border-radius: 3px;
+        background: $ford-white;
+        &:disabled {
+            opacity: 0.2;
+        }
+        @include mq('lg') {
+            height: 48px;
+            font-size: $ford-header-size;
+        }
+        .ford-arrow {
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &__error-message {
+        font-size: $font-title-small-size;
+    }
+    &__use-my-location-container {
+        display: flex;
+        align-items: flex-end;
+        @include mq('md') {
+            height: 72px;
+        }
+        @include mq('lg') {
+            height: 84px;
+        }
+    }
+    &__use-my-location {
+        white-space: nowrap;
+        border: none;
+        font-family: $ford-font-family;
+        font-size: $ford-large-description-size;
+        background: none;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        @include mq('md') {
+            margin-left: 10px;
+            margin-top: 0;
+        }
+        @include mq('lg') {
+            height: 50px;
+        }
+        &--image {
+            margin-right: 5px;
+        }
+    }
+    &__dealer-customer {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 0;
+            font-size: $ford-title-size;
+            @include mq('md') {
+                flex-direction: row;
+                align-items: center;
+            }
+        }
+        &__pipe {
+            display: none;
+            padding: 0 10px;
+            @include mq('md') {
+                display: block;
+            }
+        }
+    }
+    &__search-by-dealer {
+        display: flex;
+        align-items: center;
+        min-height: 24px;
+        &--link {
+            color: $ford-dark-blue;
+            text-decoration: underline;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+    }
+    &__customer-type {
+        display: flex;
+        align-items: center;
+        min-height: 24px;
+        &--link {
+            padding-right: 5px;
+            color: $ford-dark-blue;
+        }
+    }
+    &__dealer-container {
+        display: flex;
+        flex-direction: column;
+        >* {
+            margin: 0;
+        }
+    }
+    &__dealer-name {
+        font-size: $ford-large-description-size;
+        font-weight: bold;
+        color: $ford-dark-blue;
+    }
+    &__dealer-location {
+        color: $ford-dark-blue;
+    }
+    &__available-data {
+        background-color: $ford-light-blue;
+        color: $ford-white;
+        width: fit-content;
+        border-radius: $ford-border-radius;
+        line-height: 1;
+        padding: 8px;
+        font-size: $ford-title-size;
+        margin: 10px 0;
+    }
+    &__change-dealer {
+        font-size: $ford-title-size;
+        margin: 10px 0;
+    }
+    &__list-wrapper {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: flex-end;
+        background-color: $ford-white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        border: 1px solid $ford-medium-grey;
+        max-height: 480px;
+        overflow-y: auto;
+        z-index: 101;
+        top: 72px;
+        @include mq('lg') {
+            top: 82px;
+        }
+        ul {
+            padding: 0;
+            margin: 0;
+        }
+        &.hidden {
+            display: none;
+        }
+    }
+    &__list-item {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+    &__no-location-found {
+        background: $ford-white;
+        color: $ford-dark-blue;
+        text-align: left;
+        list-style: none;
+        font-family: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-style: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        padding: 8px 15px;
+        min-width: $autoSuggestLocationButtonWidth;
+    }
+    &__button {
+        min-width: $autoSuggestLocationButtonWidth;
+        background: $ford-white;
+        color: $ford-dark-blue;
+        text-align: left;
+        font-family: inherit;
+        font-weight: inherit;
+        font-stretch: inherit;
+        font-style: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+        &:hover {
+            background: $ford-medium-grey;
+            color: $ford-white;
+            border: 1px;
+        }
+        &.unbutton {
+            padding: 8px 15px;
+        }
+    }
+    &__dealerDetails {
+        display: block;
+    }
+    &__dealerName {
+        font-weight: bold;
+        font-size: $font-title-small-size;
+    }
+    &__dealerDistance, &__dealerLeadTime  {
+        font-size: $ford-bigger-paragraph-size;
+        float: right;
+        padding-top: 5px;
+    }
+
+    &__dealerCity {
+        display: block;
+        padding-top: 5px;
+        font-size: $ford-bigger-paragraph-size;
+    }
+}

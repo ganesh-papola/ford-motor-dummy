@@ -1,0 +1,549 @@
+/* stylelint-disable color-named, max-nesting-depth, selector-max-compound-selectors */
+@import 'styles/_app.scss';
+
+.ford-your-order-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: $ford-grey;
+  background-image: linear-gradient(166deg, white, #f7f7f7);
+  height: 100%;
+  min-height: 100vh;
+
+  overflow-y: scroll;
+  overflow-x: hidden;
+  resize: horizontal;
+
+  .header-wrapper {
+    display: flex;
+    width: 92%;
+
+    .title-and-close {
+      margin-top: 9px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
+      .title {
+        margin: 0 0 0 9px;
+        font-family: $ford-font-family-extra-light;
+        font-size: $ford-desktop-paragraph-size;
+        letter-spacing: 2px;
+        color: $ford-grey;
+      }
+
+      .close-action {
+        border: none;
+        background-color: transparent;
+
+        .close-icon {
+          width: 24px;
+          border-bottom: 1px solid $ford-dark-blue;
+          transform: rotate(45deg);
+
+          &.flip {
+            margin-top: -1px;
+            transform: rotate(135deg);
+          }
+        }
+      }
+    }
+  }
+
+  .car-and-background {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    .basket-background-image {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: auto;
+    }
+
+    .basket-vehicle-image {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      margin-top: 8px;
+      margin-left: 8%;
+      object-fit: contain;
+      transform: scale(0.9);
+    }
+  }
+
+  .your-order-content {
+    margin-top: 40px;
+
+    .model-price-container {
+      padding: 0 25px;
+      font-family: $ford-font-family-light;
+
+      .vehicle-model-text {
+        margin: 0;
+        font-size: $ford-desktop-header-size;
+        letter-spacing: 2px;
+      }
+
+      .pre-order-disclaimer {
+        margin-top: 22px;
+        font-family: $ford-font-family-regular;
+        font-size: $ford-title-size;
+        letter-spacing: 2px;
+        line-height: 2.25;
+      }
+      .ford-horizontal-line {
+        margin: 20px 0;
+      }
+
+      .finance-section {
+        .description-and-price {
+          margin-top: 15px;
+        }
+        hr:only-child {
+          display: none;
+        }
+      }
+
+      .description-and-price {
+        letter-spacing: 1.5px;
+        color: $ford-grey;
+
+        .description {
+          font: {
+            size: $ford-paragraph-size;
+          }
+          display: flex;
+        }
+
+        .price {
+          margin-top: 8px;
+          font: {
+            size: $ford-title-size;
+            family: $ford-font-family-regular;
+          }
+          display: flex;
+          flex-direction: row;
+
+          .disclaimer {
+            font-family: $ford-font-family-regular;
+            font-size: $ford-tooltip-size;
+            cursor: pointer;
+            color: $ford-dark-blue;
+            outline-offset: 3px;
+          }
+        }
+
+        &.new-order {
+          .description {
+            height: 18px;
+          }
+          .price {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .vehicle-configuration {
+        margin-top: 36px;
+
+        .trim-options-container {
+          list-style: none;
+          margin: 0;
+          padding-left: 20px;
+
+          .trim-option {
+            margin-top: 24px;
+            font-family: $ford-font-family-regular;
+            letter-spacing: 1.5px;
+
+            .trim {
+              font-size: $ford-paragraph-size;
+              color: $ford-grey;
+            }
+
+            .price {
+              margin-top: 5px;
+              font-size: $ford-title-size;
+            }
+          }
+        }
+      }
+
+      .description-with-arrow {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: $ford-paragraph-size;
+        line-height: 3.89;
+        letter-spacing: 1.5px;
+
+        .description-and-disclaimer {
+          display: flex;
+        }
+        #configuredOptions {
+          display: flex;
+          align-items: center;
+        }
+      }
+      .estimated-amount-section {
+        padding-left: 20px;
+      }
+
+      .lite-config-pricing-stack {
+        padding-top: 25px;
+      }
+      .total-fees-breakdown-options {
+        margin-top: 5px;
+        padding-left: 20px;
+        .description-and-price {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .description-and-price {
+      margin-top: 27px;
+      letter-spacing: 1.5px;
+      color: $ford-grey;
+
+      .description {
+        font-size: $ford-paragraph-size;
+      }
+
+      .price {
+        margin-top: 8px;
+        font-size: $ford-title-size;
+
+        &.larger {
+          font-size: $ford-desktop-header-size;
+        }
+
+        .disclaimer {
+          font-family: $ford-font-family-regular;
+          font-size: $ford-tooltip-size;
+          color: $ford-dark-blue;
+          outline-offset: 3px;
+        }
+      }
+    }
+
+    .payment-guarantee {
+      margin-top: 22px;
+      font-family: $ford-font-family-regular;
+      font-size: $font-title-small-size;
+      letter-spacing: 1.83px;
+      line-height: 2;
+    }
+
+    .your-dealer-info {
+      width: 100%;
+      font-family: $ford-font-family-light;
+      margin-left: 25px;
+
+      .prompt {
+        margin-top: 83px;
+        margin-bottom: 0;
+        font-size: $ford-desktop-header-size;
+        letter-spacing: 2px;
+      }
+
+      .dealer {
+        margin-top: 14px;
+        margin-bottom: 57px;
+        font-size: $ford-paragraph-size;
+        letter-spacing: 1.5px;
+      }
+    }
+
+    .final-balloon-payment-disclaimer {
+      p {
+        font-family: $ford-font-family;
+        font-size: $font-title-small-size;
+        line-height: 1.91;
+      }
+      margin: 0 25px;
+      letter-spacing: 1px;
+      color: $ford-grey;
+    }
+  }
+
+  @include mq('md') {
+    .header-wrapper {
+      padding: 0 60px;
+      height: 40px;
+      width: 100%;
+
+      .title-and-close {
+        .title {
+          font-size: $ford-desktop-subheader-size;
+          line-height: 1.39;
+          letter-spacing: 3px;
+        }
+      }
+    }
+
+    .your-order-content {
+      padding: 0 60px;
+
+      .model-price-container {
+        padding: 0;
+
+        .vehicle-model-text {
+          font-size: $ford-desktop-jumbo-header-size;
+          line-height: 1.46;
+          letter-spacing: 3px;
+
+          .pre-order-disclaimer {
+            color: $ford-grey;
+          }
+        }
+
+        .description-and-price {
+          margin-top: 27px;
+          line-height: 2;
+          letter-spacing: 1.83px;
+          color: $ford-grey;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .description {
+            font: {
+              size: $font-title-small-size;
+              family: $ford-font-family-light;
+            }
+          }
+
+          .price {
+            margin-top: 0;
+            font: {
+              size: $ford-desktop-header-size;
+              family: $ford-font-family-regular;
+            }
+            display: flex;
+            flex-direction: row;
+
+            &.larger {
+              font-size: 22px;
+            }
+
+            .disclaimer {
+              font-family: $ford-font-family-regular;
+              font-size: $ford-tooltip-size;
+              cursor: pointer;
+              color: $ford-dark-blue;
+              outline-offset: 3px;
+            }
+          }
+        }
+      }
+
+      .your-dealer-info {
+        margin-left: 0;
+
+        .prompt {
+          line-height: 1.46;
+          letter-spacing: 3px;
+          font-size: $ford-desktop-jumbo-header-size;
+        }
+
+        .dealer {
+          font-size: $ford-desktop-paragraph-size;
+          font-weight: 300;
+          line-height: 2.92;
+          letter-spacing: 2px;
+        }
+      }
+
+      .final-balloon-payment-disclaimer {
+        margin: unset;
+      }
+    }
+  }
+
+  @include mq('lg') {
+    min-height: 1136px;
+
+    .header-wrapper {
+      margin: 18px 0;
+      width: auto;
+
+      .title-and-close {
+        justify-content: center;
+
+        .title {
+          font-size: $ford-desktop-subheader-size;
+          letter-spacing: 2.25px;
+          line-height: 1.94;
+        }
+
+        .close-action {
+          display: none;
+        }
+      }
+    }
+
+    .car-and-background {
+      width: 608px;
+      height: 223px;
+
+      .basket-background-image {
+        width: 608px;
+        height: 223px;
+      }
+
+      .basket-vehicle-image {
+        transform: scale(0.7);
+        margin-top: -60px;
+        margin-left: 40px;
+      }
+    }
+
+    .your-order-content {
+      height: auto;
+      margin-top: 55px;
+
+      .model-price-container {
+        padding: 0;
+
+        .vehicle-model-text {
+          font-size: $ford-desktop-jumbo-header-size;
+          letter-spacing: 3px;
+        }
+
+        .vehicle-configuration {
+          .description-and-price {
+            margin-top: 17px;
+            display: flex;
+            justify-content: space-between;
+
+            &:first-child {
+              margin-top: 17px;
+            }
+
+            .description {
+              letter-spacing: 2px;
+              font-size: $ford-desktop-paragraph-size;
+            }
+
+            .price {
+              margin-top: 0;
+              letter-spacing: 2px;
+              font-size: $ford-desktop-header-size;
+
+              .disclaimer {
+                font-size: $ford-tooltip-size;
+                color: $ford-dark-blue;
+                outline-offset: 3px;
+              }
+            }
+          }
+
+          .trim-options-container {
+            .trim-option {
+              margin-top: 19px;
+
+              display: flex;
+              justify-content: space-between;
+
+              .trim {
+                font-size: $ford-desktop-paragraph-size;
+                letter-spacing: 2px;
+              }
+
+              .price {
+                margin-top: 0;
+                letter-spacing: 2px;
+                font-size: $ford-desktop-header-size;
+
+                .disclaimer {
+                  font-size: $ford-tooltip-size;
+                  outline-offset: 3px;
+                }
+              }
+            }
+          }
+        }
+
+        .horizontal-rule {
+          &.extra {
+            margin-top: 30px;
+          }
+
+          &.less {
+            margin-top: 12px;
+          }
+        }
+
+        .description-and-price {
+          display: flex;
+          justify-content: space-between;
+
+          &.new-order {
+            margin-top: 10px;
+          }
+
+          &:first-child {
+            margin-top: 0;
+          }
+
+          .description {
+            font-size: $ford-desktop-paragraph-size;
+            letter-spacing: 2px;
+            max-width: 400px;
+          }
+
+          .price {
+            margin-top: 0;
+            letter-spacing: 2px;
+            font-size: $ford-desktop-header-size;
+            display: flex;
+            white-space: nowrap;
+
+            &.larger {
+              font-size: 22px;
+            }
+
+            .disclaimer {
+              font-size: $ford-tooltip-size;
+              outline-offset: 3px;
+            }
+          }
+        }
+
+        .description-with-arrow {
+          font-size: $ford-title-size;
+          line-height: 2.92;
+          letter-spacing: 2px;
+        }
+      }
+
+      .payment-guarantee {
+        margin-top: 20px;
+      }
+
+      .your-dealer-info {
+        width: 100%;
+
+        .prompt {
+          margin-top: 64px;
+          font-size: $ford-desktop-jumbo-header-size;
+          letter-spacing: 3px;
+        }
+
+        .dealer {
+          font-size: $ford-title-size;
+          letter-spacing: 2px;
+        }
+      }
+
+      .final-balloon-payment-disclaimer {
+        margin: unset;
+      }
+    }
+  }
+}

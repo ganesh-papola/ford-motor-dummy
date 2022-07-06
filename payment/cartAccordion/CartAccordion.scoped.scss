@@ -1,0 +1,163 @@
+@import 'styles/_app.scss';
+@import 'styles/tools/utility.scss';
+
+.cart-accordion {
+  margin-top: 30px;
+  border-top: 2px solid $ford-horizontal-line;
+  border-bottom: 2px solid $ford-horizontal-line;
+  .protection-plans {
+    text-align: center;
+  }
+
+  .charging-accessories-page-cta {
+    margin-bottom: 30px;
+  }
+  .top-spacing {
+    margin-top: 30px;
+  }
+  .bottom-spacing {
+    margin-bottom: 30px;
+  }
+
+  &.no-top-border {
+    margin-top: 0;
+    border-top: 0;
+  }
+
+  .header {
+    min-height: 85px;
+    display: flex;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 0;
+    align-items: center;
+    transition: background 1s linear;
+
+    &.closed {
+      background: $ford-white;
+    }
+
+    &.open {
+      background: transparent;
+    }
+
+    .text {
+      flex-grow: 1;
+      padding-left: 15px;
+      padding-right: 15px;
+      text-align: left;
+    }
+
+    .toggle {
+      display: flex;
+      align-items: center;
+      padding: fds-rem(0 15px 0 0);
+    }
+  }
+
+  .status-messages {
+    &__message {
+      font-family: $ford-font-family;
+      font-size: $font-title-small-size;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.91;
+      letter-spacing: 1px;
+      color: $ford-grey;
+      margin: 0;
+      padding: 4px 8px 10px 8px;
+      &:last-of-type {
+        padding-bottom: 30px;
+      }
+    }
+  }
+  .padding-wrapper {
+    padding: fds-rem(0 15px 0);
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    transition: all .75s ease;
+    &.accordion-expand-height {
+      visibility: visible !important;
+      max-height: 1000px;
+      opacity: 1;
+      overflow: visible;
+    }
+  }
+
+  .inner-content {
+    display: flex;
+    cursor: default;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+
+    /*
+      Don't add padding or margin here.
+      Add to .padding-wrapper instead
+    */
+  }
+
+  .inner-content--list {
+    flex-direction: column;
+    padding: fds-rem(0 30px 30px 0);
+  }
+
+  .back-to-edit {
+    margin-bottom: fds-rem(20px);
+  }
+
+  .no-flex {
+    display: block;
+  }
+
+  @include mq('lg') {
+    padding-bottom: unset;
+  }
+
+  .next-steps {
+    color: $ford-dark-blue;
+    font-family: $ford-font-family-regular;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    margin-right: 15px;
+    line-height: 1em;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .unbutton {
+    appearance: button;
+    text-transform: none;
+    overflow: visible;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+    border: none;
+    border-image-width: 0;
+    display: flex;
+    background-color: inherit;
+    padding: inherit;
+    text-align: inherit;
+    align-items: inherit;
+    justify-content: center;
+  }
+}
+
+.cart-accordion.accessories .padding-wrapper {
+  &.accordion-expand-height {
+    overflow-y: auto;
+  }
+}
+
+.cart-accordion.charging .padding-wrapper {
+  &.accordion-expand-height {
+    overflow-y: auto;
+  }
+}

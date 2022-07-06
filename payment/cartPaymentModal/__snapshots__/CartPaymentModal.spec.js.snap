@@ -1,0 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PaymentDealerIconModal should render 1`] = `<div />`;
+
+exports[`PaymentDealerIconModal should render empty divs when closed 1`] = `<div />`;

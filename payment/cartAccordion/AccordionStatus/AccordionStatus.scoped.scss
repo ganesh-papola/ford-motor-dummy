@@ -1,0 +1,110 @@
+@import 'styles/_app.scss';
+
+.accordion-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
+
+  .title {
+    font-family: $ford-font-family-medium;
+    font-size: $ford-cart-price-size;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: 1px;
+    color: $ford-dark-blue;
+    margin: fds-rem(0 0 4px);
+
+    @include media("<fds-sm") {
+      font-size: fds-rem(12px);
+      line-height: 1.7;
+    }
+
+    &.selected {
+      font-family: $fds-font--antenna;
+      font-size: fds-rem(11px);
+      letter-spacing: 1px;
+      color: $ford-grey;
+    }
+  }
+
+  .warning {
+    color: $ford-warning-text-red;
+
+    .required-text {
+      color: $ford-warning-text-red;
+    }
+  }
+
+  .subtitle,
+  .required-text {
+    font-family: $ford-font-family;
+    font-size: $font-title-small-size;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    color: $ford-grey;
+    margin: 0;
+  }
+
+  .check {
+    height: 13px;
+    width: 13px;
+    margin-left: 0.5em;
+    vertical-align: middle;
+  }
+
+  .warning-icon {
+    height: 16px;
+    width: 16px;
+    margin-left: 0.5em;
+    vertical-align: text-bottom;
+  }
+
+  .accordion-details {
+    font-family: $ford-font-family-medium;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: 1px;
+    color: $ford-dark-blue;
+    text-transform: uppercase;
+
+    @include media("<fds-sm") {
+      font-size: fds-rem(12px);
+      line-height: 1.7;
+    }
+  }
+
+
+  &__copy {
+    padding-right: 1em;
+  }
+
+  &__monthly,
+  &__total {
+    font-family: $fds-font--antenna;
+    font-size: fds-rem($font-title-small-size);
+    letter-spacing: 1px;
+    line-height: 21px;
+    color: $fds-color--dk-gray;
+    text-align: right;
+  }
+}
+
+.accordion-protection-plan-price {
+  font-family: $ford-font-family-medium;
+  font-size: 11px;
+  color: $ford-grey;
+  text-align: right;
+  letter-spacing: 1px;
+}

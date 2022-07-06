@@ -1,0 +1,43 @@
+@import 'styles/_app.scss';
+
+.payment-method-customer-type {
+  font-family: $ford-font-family;
+  font-size: $font-title-small-size;
+  margin-left: 8px;
+  margin-bottom: 20px;
+  color: $ford-grey;
+  letter-spacing: 1px;
+
+  .fds-secondary-button__wrapper {
+    display: inline;
+
+    .fds-secondary-button {
+      display: inherit;
+
+      .fds-secondary-button__button {
+        display: inherit;
+        padding: 0;
+
+        &.fds-secondary-button__button--large {
+          margin-top: 16px;
+
+          .fds-secondary-button__text {
+            font-size: $ford-header-size;
+            font-weight: bold;
+            white-space: normal;
+          }
+        }
+
+        .fds-secondary-button__text {
+          font-size: $font-title-small-size;
+          font-family: $ford-font-family;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.accordion-hidden {
+  visibility: hidden;
+}

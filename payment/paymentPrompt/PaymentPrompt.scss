@@ -1,0 +1,499 @@
+/* stylelint-disable color-named, property-no-vendor-prefix, selector-max-compound-selectors */
+@import 'styles/_app.scss';
+
+sup {
+  top: 7px;
+  left: 1px;
+}
+
+.ford-payment-prompt {
+  padding: 0 25px;
+  color: $ford-grey;
+  margin-top: 42px;
+
+  &.hidden {
+    display: none;
+  }
+
+  .payment-title {
+    display: none;
+    font-family: $ford-font-family-extra-light;
+  }
+
+  .reservation-deposit-text {
+    margin-top: -4px;
+    margin-bottom: 0;
+    font-family: $ford-font-family;
+    font-size: $ford-paragraph-size;
+    line-height: 2.33;
+    letter-spacing: 1px;
+  }
+
+  .reservation-price {
+    margin-top: 32px;
+    font-family: $ford-font-family-regular;
+    font-size: 16px;
+    line-height: 2.19;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+
+    sup {
+      top: -1.3em;
+    }
+
+    .disclaimer {
+      transform: translateY(-5px);
+      font-family: $ford-font-family-regular;
+      font-size: $ford-paragraph-size;
+      cursor: pointer;
+      line-height: 30px;
+      color: $ford-dark-blue;
+    }
+    .reservation-price-eu-disclosure {
+      display: inline;
+    }
+  }
+
+  .reservation-to-pay-text {
+    margin: 0;
+    font-family: $ford-font-family;
+    font-size: 8px;
+    transform: translateY(-5px);
+    letter-spacing: 1px;
+  }
+
+  .card-charge-text {
+    margin-top: 15px;
+    font-size: $ford-paragraph-size;
+    font-family: $ford-font-family;
+    line-height: 2.33;
+    letter-spacing: 1px;
+    color: $ford-grey;
+  }
+
+  .methods-of-payment {
+    padding-top: 20px;
+    padding-bottom: 43px;
+    font-family: $ford-font-family;
+    font-size: $ford-paragraph-size;
+    letter-spacing: 0.79px;
+    line-height: 1.89;
+    color: $ford-grey;
+  }
+
+  .battery-disclaimer {
+    padding-top: 20px;
+    padding-bottom: 43px;
+    font-family: $ford-font-family;
+    font-size: $ford-paragraph-size;
+    letter-spacing: 0.79px;
+    line-height: 1.89;
+    color: $ford-grey;
+
+    .disclaimer-tooltip {
+      display: inline;
+
+      .disclaimer-icon-action {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        width: 20px;
+        height: 20px;
+        margin-top: -1px;
+        cursor: pointer;
+        color: $ford-dark-blue;
+        margin-left: 0;
+
+        .info-image {
+          transform: translate(-6px, -2px);
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .us-disclaimer-asterisk {
+      color: $ford-grey;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      padding: 0;
+    }
+
+    .eu-disclaimer-icon {
+      padding: 0;
+      transform: scale(0.5) translateY(20px);
+      cursor: pointer;
+    }
+  }
+
+  // Overriding Payment Methods Components styles
+  .payment-method-container {
+    padding: 40px 0;
+    background-color: $ford-white;
+    border-top: 1px solid $ford-horizontal-line;
+    margin-top: 0;
+    .payment-method-title {
+      font-family: $ford-font-family-regular;
+      font-size: 15px;
+      font-weight: normal;
+      line-height: 1.63;
+      letter-spacing: 2px;
+      text-align: left;
+    }
+    .payment-indicate-text {
+      margin: 30px 0;
+      font-size: $ford-paragraph-size;
+      text-align: left;
+    }
+    .ford-option-text {
+      font-size: $ford-paragraph-size;
+    }
+    .ford-radio-container {
+      margin-left: 0;
+    }
+  }
+
+  .payment-due-today-container {
+    background: transparent;
+    text-align: left;
+
+    .payment-due-today-inner-container {
+      padding: 0;
+
+      .terms-and-conditions-link,
+      .special-offers-text {
+        font-size: $ford-title-size;
+      }
+    }
+
+    .payment-due-today-footer-container {
+      background: transparent;
+
+      .continue-to-payment-button {
+        width: 246px;
+        height: 40px;
+        border-radius: 3px;
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1),
+          0 20px 20px 0 rgba(0, 0, 0, 0.1), 0 30px 30px 0 rgba(0, 0, 0, 0.15);
+        background-color: $ford-dark-blue;
+        color: $ford-white;
+
+        &.disabled {
+          cursor: auto;
+          background-color: $ford-future-grey;
+        }
+
+        &.enabled {
+          background-color: $ford-dark-blue;
+          color: $ford-white;
+        }
+
+        .ford-arrow {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .checkbox {
+    .checkbox {
+      .input {
+        cursor: pointer;
+      }
+    }
+
+    .checkbox-prompt {
+      color: $ford-grey;
+    }
+
+    .prompt-button {
+      color: $ford-dark-blue;
+      font-family: $ford-font-family;
+      font-size: $ford-paragraph-size;
+      background-color: transparent;
+      border: none;
+      letter-spacing: 1px;
+      text-decoration: underline;
+      padding: 3px;
+      cursor: pointer;
+    }
+  }
+
+  .confirmation-text {
+    margin-top: 40px;
+    font-size: $ford-paragraph-size;
+    font-family: $ford-font-family;
+    line-height: 2.22;
+    letter-spacing: 0.79px;
+    color: $ford-grey;
+  }
+
+  .ford-pay-error-message {
+    color: $ford-input-border-error-red;
+    font-family: $ford-font-family;
+    font-size: $ford-title-size;
+    line-height: 2;
+    letter-spacing: 1px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+
+    .make-payment-action {
+      width: 246px;
+      height: 40px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      background-color: $ford-dark-blue;
+      color: white;
+      margin-top: 42px;
+      margin-bottom: 2px;
+      border-radius: 3px;
+      font-size: $ford-desktop-subheader-size;
+      font-family: $ford-font-family-regular;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1),
+        0 20px 20px 0 rgba(0, 0, 0, 0.1), 0 30px 30px 0 rgba(0, 0, 0, 0.15);
+      cursor: pointer;
+      -webkit-align-items: center;
+    }
+
+    .btn-primary {
+      width: 246px;
+      height: 40px;
+      border: none;
+      display: flex;
+      justify-content: center;
+      background-color: $ford-dark-blue;
+      color: white;
+      margin-top: 42px;
+      margin-bottom: 2px;
+      padding: unset;
+      border-radius: 3px;
+      font-size: $ford-desktop-subheader-size;
+      font-family: $ford-font-family-regular;
+      font-weight: unset;
+      letter-spacing: 1px;
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1),
+        0 20px 20px 0 rgba(0, 0, 0, 0.1), 0 30px 30px 0 rgba(0, 0, 0, 0.15);
+    }
+    .opacity-grayscale {
+      opacity: 0.6;
+      filter: grayscale(100%);
+    }
+  }
+
+  @include mq('md') {
+    padding: 0 60px;
+    .button-container {
+      justify-content: flex-start;
+    }
+    .reservation-deposit-text {
+      font-size: $font-title-small-size;
+      line-height: 2.45;
+      letter-spacing: 0.92px;
+    }
+    .reservation-to-pay-text {
+      font-size: $ford-bigger-paragraph-size;
+      line-height: 1.7;
+      letter-spacing: 1.11px;
+    }
+    .card-charge-text {
+      font-size: $font-title-small-size;
+      line-height: 2.45;
+      letter-spacing: 0.92px;
+    }
+    .battery-disclaimer {
+      font-size: $font-title-small-size;
+      line-height: 2.45;
+      letter-spacing: 0.92px;
+    }
+    .confirmation-text {
+      font-size: $font-title-small-size;
+      line-height: 2.45;
+      letter-spacing: 0.92px;
+    }
+
+    // Overriding Payment Methods Components styles
+    .payment-method-container {
+      .payment-method-title {
+        font-family: $ford-font-family-regular;
+        font-size: 16px;
+      }
+      .payment-indicate-text,
+      .ford-option-text {
+        font-size: $font-title-small-size;
+      }
+    }
+    .payment-due-today-footer-container {
+      padding-left: 0;
+    }
+  }
+  @include mq('lg') {
+    margin-top: 36px;
+    padding: 0 7%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .payment-title {
+      display: unset;
+      font-size: $ford-desktop-jumbo-header-size;
+      font-weight: 300;
+      line-height: 1.46;
+      letter-spacing: 3px;
+    }
+
+    .reservation-deposit-text {
+      margin-top: 25px;
+      font-size: $ford-title-size;
+      line-height: 2.25;
+    }
+
+    .reservation-price {
+      margin-top: 38px;
+      font-size: 24px;
+      line-height: normal;
+      letter-spacing: 3px;
+
+      .disclaimer {
+        font-size: $ford-title-size;
+        color: $ford-dark-blue;
+      }
+    }
+
+    .reservation-to-pay-text {
+      margin-top: 6px;
+      font-size: $ford-paragraph-size;
+      line-height: 1.89;
+    }
+
+    .card-charge-text {
+      margin: 14px 0 0 0;
+      font-size: $ford-title-size;
+      line-height: 2.25;
+    }
+
+    .methods-of-payment {
+      font-size: $ford-title-size;
+      line-height: 2.25;
+    }
+
+    .battery-disclaimer {
+      margin-top: 18px;
+      padding-top: 0;
+      padding-bottom: 57px;
+      font-size: $ford-bigger-paragraph-size;
+      line-height: 2;
+      display: flex;
+
+      .disclaimer-icon-action {
+        width: 30px;
+        height: 30px;
+        margin-top: -5px;
+        margin-left: 5px;
+
+        .info-image {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+
+    .checkbox {
+      .prompt-button {
+        font-size: $ford-desktop-paragraph-size;
+      }
+    }
+
+    .confirmation-text {
+      margin-top: 48px;
+      font-size: $ford-title-size;
+      line-height: 2.25;
+      letter-spacing: 1px;
+    }
+
+    .button-container {
+      margin-top: 35px;
+      display: unset;
+
+      .make-payment-action {
+        width: 295px;
+        margin-top: 18px;
+        margin-bottom: 2px;
+      }
+    }
+
+    // Overriding Payment Methods Components styles
+    .payment-method-container {
+      padding: 50px 0 60px;
+      margin-top: 15px;
+      .payment-method-title {
+        font-family: $ford-font-family-regular;
+        font-size: 16px;
+      }
+      .payment-indicate-text,
+      .ford-option-text {
+        font-size: $ford-title-size;
+      }
+    }
+
+    .payment-due-today-container {
+      div.payment-due-today-footer-container {
+        background: transparent;
+
+        button.continue-to-payment-button {
+          width: 295px;
+        }
+      }
+    }
+  }
+}
+
+.ford-pay-modal {
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+
+  .ford-modal-inner-container {
+    height: 100%;
+
+    .align-button {
+      padding: 2% 2% 0 0;
+    }
+
+    .ford-modal-content {
+      height: 100%;
+    }
+  }
+}
+
+.payment-disclaimer-modal {
+  .ford-modal-inner-container {
+    padding: 0 5px;
+
+    .payment-disclaimer-modal-title {
+      font-family: $ford-font-family-regular;
+      font-size: $ford-title-size;
+      line-height: 2.08;
+      letter-spacing: 2.25px;
+      color: $ford-grey;
+      margin: 0;
+      padding-left: 3px;
+    }
+
+    .payment-disclaimer-modal-text {
+      font-family: $ford-font-family;
+      font-size: $ford-bigger-paragraph-size;
+      line-height: 2.22;
+      letter-spacing: 0.79px;
+      color: $ford-grey;
+      padding-left: 3px;
+      padding-right: 19px;
+    }
+  }
+}

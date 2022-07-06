@@ -1,0 +1,41 @@
+export default {
+  isLoading: false,
+  hasSucceeded: false,
+  hasSucceededWithValidData: false,
+  hasFailed: false,
+  data: {
+    accessoryData: {},
+    alternativeLenderSelection: false,
+    cartCheckoutCompleted: true,
+    channel: 'WEB',
+    chargingData: {},
+    code: 'sit-10895021',
+    created: '2021-12-13T17:23:53+0000',
+    deliveryData: {},
+    entries: [
+      {
+        financeData: {
+          blackOutPeriod: false,
+          quote: {
+            amountPayableLessGmfv: 13873,
+          },
+        },
+      },
+    ],
+    isInvalidColor: false,
+    isVehicleConfigChange: false,
+    offersAndIncentivesData: {},
+    offlinePriceChanges: {},
+    orderConfirmedDate: '2021-12-13T17:23:53+0000',
+    orderType: 'order',
+    paymentThreshold: '500.0',
+    protectionPlansData: {},
+    purchaseData: {},
+    readyToPurchase: false,
+    reservationDate: '2021-12-13T17:23:53.640Z',
+    status: 'CREATED',
+    statusDisplay: 'created',
+    totalPrice: {},
+    user: {},
+  },
+};

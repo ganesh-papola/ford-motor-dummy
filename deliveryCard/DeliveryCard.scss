@@ -1,0 +1,159 @@
+@import 'styles/_app.scss';
+
+.delivery-card {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  max-width: 292px;
+  min-height: 375px;
+  @include card-shadow();
+  white-space: pre-wrap;
+  padding: 0px 0px 40px 0px;
+  font-family: $ford-font-family;
+  font-size: $font-title-small-size;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.91;
+  letter-spacing: 1px;
+  text-align: center;
+  color: $ford-grey;
+  box-sizing: border-box;
+  border-radius: 3px;
+  background-color: $ford-white;
+  flex-grow: 2;
+
+  &.selected {
+    border: 1px solid $ford-dark-blue;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+  }
+
+  .title {
+    font-family: $ford-font-family-regular;
+    text-align: center;
+    padding: 20px;
+    background-color: $ford-dark-blue;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    color: $ford-white;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+
+    .title-tooltip {
+      width: 20px;
+      height: 20px;
+      margin-left: 4px;
+
+      .ford-tooltip-button {
+        width: inherit;
+        height: inherit;
+        padding: unset;
+
+        .info-icon {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  .fee {
+    font-family: $ford-font-family-bold;
+    color: $ford-dark-blue;
+    font-size: 16px;
+  }
+
+  .delivery-unavailable {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: $ford-desktop-paragraph-size;
+    padding: 0 20px;
+
+    &__tooltip {
+      width: 16px;
+      height: 16px;
+      margin-left: 4px;
+
+      .ford-tooltip-button {
+        width: inherit;
+        height: inherit;
+        padding: unset;
+
+        .info-icon {
+          width: inherit;
+        }
+      }
+    }
+  }
+
+  .ford-button {
+    font-size: 18px;
+    display: inline-block;
+    margin: 35px auto 0 auto;
+  }
+
+  .address {
+    padding: 0 20px;
+  }
+
+  .selected-block,
+  .unselect-button {
+    font-family: $ford-font-family-regular;
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.63;
+    letter-spacing: 2px;
+    text-align: center;
+    color: $ford-dark-blue;
+
+    .selected-text {
+      margin: 10px 0;
+    }
+  }
+
+  .unselect-button {
+    border: none;
+    text-decoration: underline;
+    background-color: unset;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .check {
+    margin-left: 5px;
+    height: 13px;
+    width: 13px;
+  }
+
+  .add-to-finance {
+    margin: 0 auto;
+
+    &__label {
+      font-family: $ford-font-family;
+      font-size: $ford-cart-price-size;
+      font-weight: normal;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.63;
+      letter-spacing: 1px;
+      color: $ford-grey;
+    }
+
+    .ford-checkbox {
+      margin-top: unset;
+    }
+  }
+  &__content {
+    padding: 0 20px;
+  }
+}

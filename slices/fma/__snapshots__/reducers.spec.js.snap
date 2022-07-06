@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fma reducers should load initialState 1`] = `
+Object {
+  "access_token": null,
+  "guestGUID": null,
+  "isAuthenticated": undefined,
+  "isLoading": false,
+  "overrideFmaRequired": false,
+}
+`;

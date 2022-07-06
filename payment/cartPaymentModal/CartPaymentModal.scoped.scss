@@ -1,0 +1,98 @@
+@import 'styles/_app.scss';
+
+.inner-wrapper {
+  background-color: $ford-white;
+}
+
+@include mq($size: 'md') {
+  .inner-wrapper {
+    height: unset;
+  }
+}
+
+.header {
+  border-bottom: 2px solid #d8d8d8;
+  font-family: $ford-font-family-light;
+  font-size: 16px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 26px;
+  letter-spacing: 3px;
+  color: $ford-grey;
+  padding: 17px 21px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  @include mq($size: 'md') {
+    align-items: center;
+    font-weight: 300;
+    line-height: 1.5;
+    padding: 25px 40px;
+    font-size: 20px;
+  }
+}
+
+.body {
+  padding: 29px 25px 22px;
+  @include mq($size: 'md') {
+    padding: 40px 50px;
+  }
+}
+
+.body--pricingstack {
+  width: 100%;
+  max-width: fds-rem(900px);
+  padding: fds-rem(50px 20px 70px);
+  margin: 0 auto;
+
+  @include mq($size: 'md') {
+    padding: fds-rem(70px 40px 100px);
+  }
+}
+
+.title {
+  font-family: $ford-font-family-light;
+  font-size: 20px;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 30px;
+  letter-spacing: 3px;
+  color: $ford-grey;
+  margin-bottom: 5px;
+  margin-top: 0;
+  @include mq($size: 'md') {
+    line-height: 1.29;
+    letter-spacing: 4px;
+    font-weight: 300;
+    font-size: 34px;
+    margin-bottom: 15px;
+  }
+}
+
+.sub-title {
+  font-family: $ford-font-family;
+  font-size: $ford-title-size;
+  line-height: 21px;
+  letter-spacing: 1px;
+  color: $ford-grey;
+  font-weight: 400;
+  @include mq($size: 'md') {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
+
+.bottom-content {
+  color: $ford-grey;
+  font-family: $ford-font-family;
+  font-size: $ford-title-size;
+  letter-spacing: 1px;
+  line-height: 21px;
+  padding: 20px 25px 25px;
+  white-space: pre-wrap;
+  @include mq($size: 'md') {
+    font-size: $font-title-small-size;
+    padding: 30px 68px;
+  }
+}

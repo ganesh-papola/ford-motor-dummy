@@ -1,0 +1,67 @@
+/* stylelint-disable selector-class-pattern */
+
+@import 'styles/_app.scss';
+
+.ReactModal__Overlay--after-open {
+  overflow-y: scroll;
+}
+
+.cart-payment-modal {
+  @include mq($size: 'md') {
+    max-width: 80%;
+    margin: 123px auto;
+  }
+  .fake-x {
+    height: 16px;
+    width: 16px;
+    @include mq('md') {
+      height: 24px;
+      width: 24px;
+    }
+    .close {
+      height: 2px;
+      &.flip {
+        margin-top: -2px;
+      }
+    }
+  }
+  .ball-chain-container.pricing-rail {
+    margin: 0 auto 30px;
+    @include mq('md') {
+      margin-top: -10px;
+    }
+  }
+
+  .zebra-list {
+    .zebra-list-item {
+      /* stylelint-disable-next-line */
+      &.pricing-row.expander .sub-item-container {
+        @include mq($size: 'md') {
+          padding: 0 68px 10px 88px;
+        }
+      }
+      /* stylelint-disable-next-line */
+      &.pricing-row.expander .value--btn {
+        padding-right: 10px;
+        @include mq($size: 'md') {
+          padding-right: 38px;
+        }
+      }
+
+      /* stylelint-disable-next-line */
+      &.pricing-row.expander .pricing-arrow {
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.dark-modal {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 100;
+}
